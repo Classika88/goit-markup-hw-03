@@ -141,7 +141,7 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   max-width: 1600px;
-  height: 600px;
+  min-height: 600px;
   margin: 0 auto;
 
   outline: 2px solid red;
@@ -203,12 +203,15 @@ img {
 }
 .benefits .title {
   text-transform: uppercase;
-  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .benefits .text {
   line-height: 1.71;
 }
 /*Examples*/
+.examples {
+  padding-top: 0;
+}
 .card-examples {
   display: flex;
   gap: 30px;
@@ -243,17 +246,19 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.team-wrapper {
+  padding: 30px 0;
+}
 .name {
   color: var(--subtitle-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  margin: 30px 0 10px 0;
+  margin-bottom: 10px;
 }
 .team .text {
   font-size: 16px;
   line-height: 1.19;
-  margin-bottom: 30px;
 }
 
 /* PORTFOLIO PAGE */
@@ -265,7 +270,7 @@ img {
   margin-bottom: 50px;
   justify-content: center;
 }
-.portfolio .button {
+.portfolio-button {
   color: var(--subtitle-color);
   background-color: #f5f4fa;
   font-family: inherit;
@@ -278,8 +283,8 @@ img {
   padding: 6px 22px;
   margin-top: 0;
 }
-.portfolio .button:hover,
-.portfolio .button:active {
+.portfolio-button:hover,
+.portfolio-button:active {
   color: var(--main-title-color);
   background-color: var(--accent-color);
   cursor: pointer;
@@ -289,37 +294,32 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 50px;
 }
 .portfolio-card {
-  text-align: left;
   flex-basis: calc((100% - 60px) / 3);
-  background-color: var(--main-title-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 .card-border {
-  border-bottom: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  padding: 20px 24px;
 }
 .portfolio .title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin: 20px 24px 4px 24px;
+  margin-bottom: 4px;
 }
 .portfolio .text {
   font-size: 16px;
   line-height: 1.88;
-  padding: 0 24px 20px 24px;
 }
 /*Footer*/
 .footer {
   background-color: #2f303a;
+  padding: 60px 0;
 }
 .footer .logo {
   color: var(--main-title-color);
-  padding-top: 60px;
   display: block;
   margin-bottom: 20px;
 }
@@ -331,9 +331,10 @@ img {
   font-style: normal;
   color: var(--main-title-color);
   line-height: 1.71;
-  padding-bottom: 60px;
 }
-
+.adress li:not(:first-child) {
+  margin-top: 9px;
+}
 .adress .link {
   color: rgba(255, 255, 255, 0.6);
 
@@ -342,8 +343,4 @@ img {
 .adress .link:hover,
 .adress .link:focus {
   color: var(--accent-color);
-}
-.footer-link {
-  display: block;
-  margin-top: 9px;
 }
